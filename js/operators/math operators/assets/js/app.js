@@ -1,0 +1,203 @@
+var cl=console.log;
+
+// ----------assignment operator(=)------------
+cl("assignment operator =");
+var x=10;
+console.log(x);
+var y=20;
+console.log(y); 
+
+var a=11;
+cl(a);
+
+var b=12;
+cl(b);
+
+var c="assign";
+cl(c);
+
+var d=true;
+cl(d);
+
+var e=null;
+cl(e);
+
+//------Addition +  -----------
+cl("Addition operator +");
+x=10;
+y=20;
+var z= x+y;
+console.log(z);
+
+var a=3;
+var b=2;
+var c= a+b;
+cl(c);
+
+var p=4;
+var q=5;
+
+var t="40";
+var r=p+q;
+cl(r);
+
+var s="30";
+var v= p + s;// string concatanation
+cl(v);
+
+u=s+t;  // string concatanation
+cl(u);
+
+// ----------Substraction {-}---------------------
+
+cl("substraction operator -");
+x=10;
+y=20;
+var z = (x-y);
+console.log(z);
+
+var a=3;
+var b=2;
+c=a-b;
+cl(c);
+
+var p=4;
+var q=5;
+r=p-q;
+cl(r);
+
+s='30';
+t='40';
+r=s-p;
+cl(r);
+
+u=s-t;
+cl(u);
+
+var name="ketu";
+var k3=name-s;
+cl(k3);//NaN>> Not a Number
+
+//-----multiplication * --------------
+cl('multiplication operator *');
+
+z=x*y;
+console.log(z);
+
+z=x*q;
+console.log(z);
+
+c=a*b;
+cl(c);
+
+r=p*q;
+cl(r);
+
+v=s*t;
+cl(v);
+
+cl(name*s);//Not a Number
+
+//-----------------Division (/)--------------
+cl('division operator');
+
+z=y/x;
+console.log(z);
+
+c=a/b;
+cl(c);
+
+r=p/q;
+cl(r);
+
+u=s/t;
+cl(u);
+
+v=s/x;
+cl(v);
+
+cl(name/x);
+
+//-------modulus(%) >> it retains reminder-------
+x=10;
+y=20;
+q='50';
+z=y%x;
+console.log(z);
+
+z=q%x;
+console.log(z);
+
+z=24%10;
+console.log(z);
+
+cl(name%5);
+
+cl(52%12);
+
+cl(58%45);
+
+
+
+//***********{+=}************
+x=10;
+x=x+1;
+console.log(x);
+
+x+=1;
+console.log(x);
+x+=1;
+console.log(x);
+
+y+=5;
+console.log(y);
+cl(a+=2);
+cl(b+=8);
+cl(s+=20);
+cl(name+=50);//string concatation
+
+y-=10;
+console.log(y);
+a=3;
+cl(a-=2);
+s='30';
+cl(s-=10);
+cl(name-=100);
+
+
+y *=5;
+console.log(y);
+a=3;
+s='30';cl(a*=2);
+cl(s*=10);
+cl(name*=10);
+
+
+y /=15;
+console.log(y);
+a=2;
+cl(a/=2);
+s='30';
+cl(s/=10);
+cl(name/=10);
+
+
+
+y+=1;
+console.log(y);
+
+y++;
+console.log(y);
+
+y--;
+console.log(y);//[6]
+
+cl(y--); //[5] same as line no193 i.e. [6]
+cl(y--);
+cl(y--);
+cl(y--);
+cl(y--);
+cl(y--);
+cl(y--);
+cl(y--);
+cl(y--);

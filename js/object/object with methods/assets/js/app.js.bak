@@ -1,0 +1,155 @@
+var cl= console.log;
+//cl('Hello');
+
+var person={
+	//key: value
+	fname:"Tony",
+	lname:"Stark",
+	nickname:"IronMan",
+	indu:"Stark industries",
+	age:55,
+	fullname: function(){
+		return person.fname+' ' +person.lname;
+	}
+}
+cl(person.fullname);
+cl(person.fullname());
+
+var person={
+	fname:'Tony',
+	lname:'Stark',
+	nickName:'IronMan',
+	age:55,
+	fullname: function(){
+		return person.fname+' '+person.lname;
+	},
+	child:{
+		fname:'Tina',
+		lname:'Stark',
+		nickName:'IronWomen',
+		age:10,
+		fullname: function(){
+			return person.child.fname + ' ' + person.child.lname;
+		}
+	}
+}
+
+cl(person.child.fullname());
+cl(person.fullname());
+
+// Object >> where we can store multiple relative info/data in the form of key value pairs. It holds reference
+
+person={
+	fname:'Tony',
+	lname:'Stark',
+	nickName:'IronMan',
+	fullName: function(){
+		return person.fname + ' ' + person.lname;
+	},
+	child:{
+		fname:'Tina',
+		lname:'Stark',
+		nickName:'IronWomen',
+		fullName: function(){
+			return person.child.fname+' '+person.child.lname;
+		},
+		grandChild:{
+			fname:'qaz',
+			lname:'Stark',
+			nickName:"Don't know",
+			fullName: function(){
+				return person.child.grandChild.fname +' '+person.child.grandChild.lname;
+			
+			},
+		}
+	}
+}
+cl(person.child.grandChild.fname);
+cl(person.child.grandChild.fullName());
+
+//methods>> function within object Are called methods
+//in above example fullName is method
+
+var person2={
+	fname:'Haribhau',
+	lname:'Bhosle',
+	fullName:function(){
+		return person2.fname+' '+person2.lname;
+	},
+	child:{
+		fname:'Ramchandra',
+		lname:'Bhosle',
+		fullName: function (){
+			return person2.child.fname+' '+person2.child.lname;
+		},
+		grandChild:{
+			fname:'Abhijeet',
+			lname:'Bhosle',
+			fullName: function (){
+				return person2.child.grandChild.fname+' '+ person2.child.grandChild.lname;
+			}
+		}
+	}
+}
+cl(person2.child.grandChild.fname);
+cl(person2.child.lname);
+cl(person2.child.grandChild.fullName());
+cl(person2.child.fullName());
+cl(person2.fullName());
+
+var pers={
+	fname:'Nivruti',
+	lname:'Narwade',
+	fullName:function(){
+		return pers.fname+'  '+pers.lname;
+	},
+	child:{
+		fname:'Gokarna',
+		lname:'Dadhale',
+		fullName:function(){
+			return pers.child.fname+' '+pers.child.lname;
+		},
+		grandChild:{
+			fname:'Vaidehi',
+			lname:'Jawlekar',
+			fullName:function(){
+				return pers.child.grandChild.fname+' '+pers.child.grandChild.lname;
+			}
+		},
+	},
+}
+
+cl(pers.child.grandChild.fname);
+cl(pers.child.grandChild.fullName());
+cl(pers.child.fullName());
+cl(pers.fullName());
+
+var per={
+	fname:'ABC',
+	lname:'XYZ',
+	country:'India',
+	fullName:function(){
+		return per.fname+' ' +per.lname;
+	},
+	links:{
+		social:{
+			facebook:'fb.com',
+			insta:'instagram.in',
+		},
+		websites:{
+			medium:'medium.com',
+			weblink:'abc.xyz',
+		}
+	}
+}
+
+var getWeblink = per.links.websites.weblink;
+cl(getWeblink);
+var media=per.links.websites.medium;
+cl(media);
+var fb=per.links.social.facebook;
+cl(fb);
+var insta=per.links.social.insta;
+cl(insta);
+
+var perfullName=per.fullName();
