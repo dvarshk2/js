@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#backDrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background-color: rgba(0,0,0,.5);
+    height: 100vh;
+    display: none;
+}
+#backDrop.show{
+    display: block;
+}
+.myModal {
+    position: fixed;
+    top: 20vh;
+    width: 60%;
+    left: 20%;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(0,0,0,.25);
+    box-shadow: 0 2px 8px rgba(0,0,0,.25);
+    display: none;
+    animation: slide-down 0.3s ease-out forwards;
+}
+.myModal.show{
+    display: block;
+}
+
+.myModalHeading .myClose{
+    float: right;
+    cursor: pointer;
+}
+@keyframes slide-down {
+    from{
+        transform: translateY(-5rem);
+    }
+    to{
+        transform: translateY(0);
+    }
+}

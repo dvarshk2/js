@@ -1,0 +1,86 @@
+let cl = console.log;
+// First digital watch
+
+function digi1(){
+	let d= new Date();
+	let hr = d.getHours();
+	let min = d.getMinutes();
+	let sec = d.getSeconds();
+	let session = "PM";
+	let digiC = document.getElementById("digi1")
+	//cl(digiC);
+	if(hr < 12){
+		session = 'AM';
+	}
+	if(hr > 12){
+		hr = hr - 12;
+	}
+	if(hr < 10){
+		hr = "0" + hr;
+	}
+	if(min < 10){
+		min = '0' + min;
+	}
+	if(sec < 10){
+		sec = '0' + sec;
+	}
+
+	let result = `${hr} : ${min} : ${sec} ${session}`;
+
+	cl(result);
+
+	digiC.innerHTML=result;
+	setTimeout(digi1,1000);
+}
+
+digi1();
+
+
+let digi2=()=>{	
+let d = new Date();
+let h = d.getHours();
+let m = d.getMinutes();
+let s = d.getSeconds();
+let ses = "PM";
+
+let digi2=document.getElementById('digi2');
+//cl(digi2);
+ses = h > 12 ? 'PM' :'AM';
+h = h > 12 ? h-12 : h;
+h = h < 10 ? '0' + h : h;
+m = m < 10 ? '0' + m : m;
+s=s++;
+s = s < 10 ? '0' + s : s;
+
+let res=`${h} : ${m} : ${s} ${ses}`;
+cl(res);
+digi2.innerHTML=res;
+setTimeout(digi2, 1000);
+}
+
+digi2();
+
+let digi3=()=>{
+	let d = new Date();
+	let hrs = d.getHours();
+	let mins = d.getMinutes();
+	let scnd = d.getSeconds()
+	let ampm = 'AM';
+	let digi3 = document.getElementById("digi3");
+	
+	ampm = hrs > 12? 'PM' :'AM';
+	hrs = hrs > 12 ? hrs -12 : hrs;
+	// hrs = hrs < 10 ? '0' + hrs:hrs;
+	// mins = mins < 10 ? '0' + mins : mins;
+	// scnd = scnd < 10 ? '0' + scnd : scnd;	
+	let result1=`${setZero(hrs)} : ${setZero(mins)} : ${setZero(scnd)} ${ampm}`;
+	
+	cl(result1);
+	digi3.innerHTML=result1;
+	setTimeout(digi3, 1000);
+}
+digi3();
+
+function setZero(n){
+	return n = n < 10 ? '0' + n : n ;
+}

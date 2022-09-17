@@ -1,0 +1,33 @@
+let cl=console.log;
+
+//print fizzbuzz for 1 to 15 Node
+//if no%3==0 >> fizzbuzz 
+//if no%5==0 >> buzz
+//if no%3==0 && no%5==0 >>FizzBuzz
+
+for(let i = 1; i<=15;i++){
+	if(i%3 ==0 && i%5 == 0){
+		cl(`FizzBuzz`);
+	}else if(i%3==0){
+		cl('Fizz');
+	}else if(i%5==0){
+		cl('Buzz');
+	}else{
+		cl(i);
+	}
+}
+
+function fizbuz(min,max){
+	for(i=min;i<=max;i++){
+		if(i%3 ==0 && i%5==0){
+			cl('FizzBuzz');
+		}else if(i%3 == 0){
+			cl('Fizz');
+		}else if(i%5){
+			cl('Buzz');
+		}else{
+			cl(i);
+		}
+	}
+}
+fizbuz(10,40);

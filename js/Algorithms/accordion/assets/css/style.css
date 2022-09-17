@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 600px;
+    margin: 0 auto;
+}
+.mt-4{
+    margin-top: 1.5rem;
+}
+.accoHeading {
+    background-color: #000;
+    color: #fff;
+    padding: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.accoHeading.active{
+    background-color: orange;
+}
+.accoInfo {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-top: 0;
+    display: none;
+}
+.accoHeading.active + .accoInfo{
+    display: block;
+}

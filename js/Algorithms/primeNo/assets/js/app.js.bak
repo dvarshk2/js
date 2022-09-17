@@ -1,0 +1,27 @@
+let cl=console.log;
+//check 7 is prime no?
+	// 7%1==0
+	// 7%2!=0  //divider=2;
+	// 7%3!=0
+	// 7%4!=0
+	// 7%5!=0
+	// 7%6!=0  //divider< number
+	// 7%7==0
+
+
+function isPrime(n){
+	let divider=2;
+	while(divider<n){
+		if(n%divider == 0){
+			return(`${n} is not prime`);
+		}else{
+			divider++;
+		}
+	}
+	return(`${n} is prime`);
+}
+
+cl(isPrime(8));
+cl(isPrime(11));
+cl(isPrime(12));
+cl(isPrime(13));

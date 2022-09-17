@@ -1,0 +1,44 @@
+{
+  "posts": [
+    {
+      "userId": 1,
+      "id": 1,
+      "title": "Edit Delete Handler",
+      "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+    },
+    {
+      "userId": 9,
+      "title": "title edit handler",
+      "body": "json server",
+      "id": 2
+    },
+    {
+      "userId": 10,
+      "title": "submit update success",
+      "body": "submit",
+      "id": 3
+    },
+    {
+      "userId": 1,
+      "title": "edit handler",
+      "body": "edit handler",
+      "id": 5
+    },
+    {
+      "userId": 4,
+      "title": "title1 edit",
+      "body": "Info1 update",
+      "id": 6
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

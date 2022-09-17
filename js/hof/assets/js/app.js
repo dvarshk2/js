@@ -1,0 +1,374 @@
+let cl= console.log;
+
+//higher order function(callback function){
+// 	function callback function();
+// }
+
+//A function which accepts function as parameter or argument is called as Higher Order Function
+
+// A function which we pass as a parameter or argument is called as callback function
+
+//Anonymus function >> function have no name is called as anonymus function
+
+//Arrow function >> anonynus function
+//sometimes callback functions are anonymus functions
+
+let ages = [23,34,45,67,54,78];
+cl("ages:",ages)
+let doubleAges =[];
+// for(i = 0; i< ages.length; i++){
+	// doubleAges.push(ages[i] * 2);
+// }
+// cl(doubleAges);
+
+// ages.forEach(function(age){
+	// doubleAges.push(age*2);
+// })
+
+
+// ages.forEach(age => {
+	// doubleAges.push(age *2);
+// })
+
+// ages.forEach(age => doubleAges.push(age * 2));
+// cl(doubleAges);
+
+//########## Map method ##############
+//map method >> to map data
+//it returns new Array
+//mapping >> Appying some functionality onarray element is called as mapping.
+
+// let newDoubleAges = ages.map(function(age){
+	// return age *2 ;
+// })
+
+let newDoubleAges = ages.map(age => age*2);
+cl(newDoubleAges);
+// *********example 2 ****************
+
+let tripleAges = [];
+// for(i=0; i< ages.length; i++){
+	// tripleAges.push(ages[i] * 3);
+// }
+
+// ages.forEach(function(a){
+	// tripleAges.push(a*3);
+// })
+ages.forEach(a => tripleAges.push(a*3));
+cl(tripleAges);
+
+// let newTripAges = ages.map(function(a){
+	// return a*3;
+// })
+let newTripAges = ages.map(a => a*3);
+cl(newTripAges);
+
+//sqrt ages
+
+let sqrtAges =[];
+// for (i=0;i<ages.length;i++){
+	// sqrtAges.push(Math.sqrt(ages[i]));
+// }
+// ages.forEach(function(age){
+	// return sqrtAges.push(Math.sqrt(age));
+// })
+ages.forEach(age => sqrtAges.push(Math.sqrt(age)));
+cl(sqrtAges);
+// let newsqrtAges = ages.map(function(ag){
+	// return Math.sqrt(ag);
+// }) 
+let newsqrtAges = ages.map(age => Math.sqrt(age));
+cl(newsqrtAges);
+
+// square ages
+let sqrAges =[];
+// for(i=0;i<ages.length;i++){
+	// sqrAges.push(ages[i]*ages[i]);
+// }
+// ages.forEach(function(age){
+	// return sqrAges.push(age*age);
+// })
+ages.forEach(age => sqrAges.push(age*age));
+cl(sqrAges);
+
+// let newSqr = ages.map(function(a){
+	// return a*a;
+// })
+let newSqr = ages.map(age => age*age);
+
+cl(newSqr);
+
+let studentInfo=[
+	{
+		fname:"Tony",
+		lname:"Stark",
+		nickName:"Ironman",
+		contact:12345,
+	},
+	{
+		fname:"Peter",
+		lname:"Parker",
+		nickName:"SpiderMan",
+		contact:67890,
+	},
+	{
+		fname:"Brusse",
+		lname:"Wyene",
+		nickName:"Batman",
+		contact:321654,
+	}
+]
+let stufName = [];
+// for(i=0;i<studentInfo.length;i++){
+	// stufName.push(studentInfo[i].fname);
+// }
+// cl(fName);
+studentInfo.forEach(function(name){
+	stufName.push(name.fname);
+})
+cl(stufName);
+
+let newFname = studentInfo.map(fn => fn.fname);
+cl(newFname);
+
+let fullName =[];
+// for(i=0;i<studentInfo.length;i++){
+	// let obj={
+		// fn : studentInfo[i].fname,
+		// ln :studentInfo[i].lname
+	// }
+	// fullName.push(obj)
+// }
+
+studentInfo.forEach(function(ob){
+	let obj={
+		fn : ob.fname,
+		ln : ob.lname,
+		nn : ob.nickName
+	}
+	return fullName.push(obj);
+})
+cl(fullName);
+
+let newcontact =studentInfo.map(cntct => {
+	let obj = {
+		fn : cntct.fname,
+		ln : cntct.lname,
+		nn : cntct.nickName,
+		cnt : cntct.contact
+	}
+	return obj;
+})
+cl(newcontact);
+
+let tutStudent=[
+	{
+		fname:"Suraj",
+		lname:"Kale",
+		email:"suraj@kale",
+	},
+	{
+		fname:"Sudarshan",
+		lname:"Dadhale",
+		email:"suda@nana",
+	},
+	{
+		fname:"Abhi",
+		lname:"Bende",
+		email:"Abhi@bende",
+	},
+	{
+		fname:"Anita",
+		lname:"Pawar",
+		email:"anita@pawar",
+	},
+	{
+		fname:"Sneha",
+		lname:"Kale",
+		email:"sneha@kale",
+	},
+	{
+		fname:"Chaitanya",
+		lname:"buchale",
+		email:"chaitan@buchale",
+	}
+]
+let ttst = [];
+// for(i=0;i< tutStudent.length;i++){
+	// ttst.push(tutStudent[i].fname,tutStudent[i].lname,tutStudent[i].email)
+// }
+
+// tutStudent.forEach(function(s){
+	// let obj={
+		// f : s.fname,
+		// l : s.lname,
+		// em : s.email
+	// }
+	// return ttst.push(obj);
+// })
+
+tutStudent.forEach(stu => 
+	ttst.push( {
+	f: stu.fname,
+	l : stu.lname,
+	em:stu.email
+	})
+)
+cl(ttst);
+let newttst = tutStudent.map(stu =>{
+	return{
+		fn : stu.fname,
+		ln : stu.lname,
+		em : stu.email
+	}
+})
+cl(newttst);
+
+
+
+
+const companies = [
+    { name: "Company One", category: "Finance", start: 1981, end: 2003 },
+    { name: "Company Two", category: "Retail", start: 1992, end: 2008 },
+    { name: "Company Three", category: "Auto", start: 1999, end: 2007 },
+	{ name: "Company Four", category: "Retail", start: 1989, end: 2010 },
+    { name: "Company Five", category: "Technology", start: 2009, end: 2014 },
+    { name: "Company Six", category: "Finance", start: 1987, end: 2010 },
+    { name: "Company Seven", category: "Auto", start: 1986, end: 1996 },
+    { name: "Company Eight", category: "Technology", start: 2011, end: 2016 },
+    { name: "Company Nine", category: "Retail", start: 1981, end: 1989 }
+]
+
+let companyName = [];
+
+// companies.forEach(comp => {
+	// companyName.push(comp.name);
+// })
+
+companies.forEach(comp => companyName.push(comp.name));
+cl(companyName);
+
+// let newCompanyNames = companies.map(comp => {
+	// return comp.name;
+// })
+
+let newCompanyNames = companies.map(comp => comp.name);
+
+cl(newCompanyNames);
+
+let compDuration = [];
+companies.forEach(comp => {
+	let obj ={
+		compName: comp.name,
+		duration: comp.end - comp.start
+	}
+	return compDuration.push(obj);
+}) 
+cl(compDuration);
+
+let newCompDuration = companies.map( comp => {
+	return{
+		companyName: comp.name,
+		duration : comp.end - comp.start,
+	}
+})
+cl(newCompDuration);
+
+
+// company Name, category
+
+let category = [];
+
+companies.forEach(comp => {
+	let obj ={
+		company: comp.name,
+		cate : comp.category,
+		dur : comp.end - comp.start,
+	}
+	return category.push(obj);
+})
+cl(category);
+
+let newCategory = companies.map(comp => {
+	return {
+		company : comp.name,
+		category: comp.category,
+		dur : comp.end - comp.start
+	}
+})
+cl(newCategory);
+
+// name , end year
+
+let endYear = [];
+
+// companies.forEach(comp => {
+	// let obj={
+		// name: comp.name,
+		// year : comp.end
+	// }
+	// endYear.push(obj);
+// })
+// cl(endYear);
+
+companies.forEach(comp => {
+	endYear.push({
+		name: comp.name,
+		Eyear : comp.end
+	})
+})
+cl(endYear);
+
+let newEnd = companies.map(comp => {
+	return{
+		name: comp.name,
+		end: comp.end
+	}
+})
+cl(newEnd);
+
+//name, start
+
+let startYear = [];
+// companies.forEach(comp => {
+	// let obj={
+		// name:comp.name,
+		// start:comp.start
+	// }
+	// startYear.push(obj);
+// })
+companies.forEach(comp => {
+	startYear.push({
+		name: comp.name,
+		startyear:comp.start
+	})
+})
+// cl(startYear);
+
+cl(startYear);
+
+let newStart = companies.map(comp => {
+	return{
+		name: comp.name,
+		star : comp.name
+	}
+})
+cl(newStart);
+
+//$$$$$$$$$$$$$$$$ Filter method $$$$$$$$$$$$$$$$$$$$$$$
+// 15 March
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,75 @@
+var cl=console.log;
+// cl('hello');
+
+
+//1	scope
+//var>>nat able to create local/block scope
+//let >> create local/blockscope 
+for(var x = 0;x <= 10;x++){
+	cl(x);
+}
+
+cl('break');
+cl(x);//11 scope of x is local/block
+
+for(let j=0; j <= 10;j++){
+	cl(j);
+}
+cl('break');
+//cl(j);//j is not defined as scope of j is local or block scope
+
+//2	redeclr and reassign
+// var>> can redeclr and reassign
+//let >> cannot redeclr but reassign
+//const >> cannot redeclare and reassign
+var a=15;
+cl(a);
+
+var a="Ten";
+cl(a);
+
+a=25;
+cl(a);
+
+let b=45;
+cl(b);
+
+// let b=85;//identifier b has already been declared
+// cl(b);
+
+b=85;
+cl(b);
+
+//const
+
+const myNewInno = 756.987;
+cl(myNewInno);
+
+// const myNewInno=123;//Identifier 'myNewInno' has already been declared
+// cl(myNewInno);
+
+// myNewInno=123;//Assignment to constant variable.
+// cl(myNewInno);
+
+//3 hpisting
+//var >> hoisting is possible and property get 'undefined' value
+//let >> hoisting possible but but cannot access before initialisation
+//const >> hoisting is possible but can not access before initialisation
+cl(abc);
+var abc= 10;
+
+// cl(xyz);
+// let xyz=20;
+
+// cl(pqr);
+const pqr =50;
+
+//let and var >> can be declared without assigning value
+//const >> value must be assigned during declaration
+
+var ab;
+let ba;
+cl(ab);
+cl(ba);
+// const c;
+// cl(c);//Missing initializer in const declaration

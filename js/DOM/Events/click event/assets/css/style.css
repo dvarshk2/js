@@ -1,0 +1,30 @@
+.demo{
+    margin: :0 auto;
+    width: 400px;
+    margin-top:50px; 
+}
+.btn{
+    padding: 10px 20px;
+    background-color: blueviolet;
+    cursor: pointer;
+    color: #fff;
+    border: none;
+}
+.demo2{
+    height: 100px;
+    width: 100px;
+    background-color: cyan;
+    margin-bottom: 30px;
+}
+.boxA{
+    height: 100px;
+    width: 100px;
+    margin: 30px;
+    border: 1px solid black;
+}
+.boxB{
+    height: 50px;
+    width: 50px;
+    margin: 30px;
+    border: 1px solid black;    
+}

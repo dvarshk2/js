@@ -1,0 +1,29 @@
+.div1{
+    width:200px;
+    height: 200px;
+    margin-bottom: 20px;
+    background-color: orange;
+}
+
+.div3{
+    height: 200px;
+    width: 200px;
+    background-color: cyan;
+    margin: 20px 10px;
+}
+.div4{
+    height: 50px;
+    width: 100px;
+    background-color: black;
+    margin: 20px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.onMouse{
+    height: 200px;
+    width: 200px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    text-align: center;
+}

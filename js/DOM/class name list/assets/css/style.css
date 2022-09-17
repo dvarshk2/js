@@ -1,0 +1,14 @@
+.skills{
+    
+    height: 300px;
+    width: 300px;
+    margin-bottom: 30px;
+    border: 1px solid black;
+}
+.basic{
+    background-color: orange;
+}
+.myBtn{
+    background-color: aqua;
+    padding: 10px 20px;
+}
